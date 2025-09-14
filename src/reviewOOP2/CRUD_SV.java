@@ -13,7 +13,6 @@ public class CRUD_SV {
         return DriverManager.getConnection(url, user, password);
     }
 
-    // Hàm tiện ích: chuyển ResultSet thành đối tượng SinhVien
     private SinhVien mapResultSetToSinhVien(ResultSet rs) throws SQLException {
         return new SinhVien(
             rs.getString("maSV"),

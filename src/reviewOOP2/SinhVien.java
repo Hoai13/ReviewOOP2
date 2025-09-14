@@ -47,7 +47,6 @@ public class SinhVien {
         }
     }
 
-
     public void setHoTen(String hoTen) {
         if (hoTen == null || hoTen.trim().isEmpty()) {
             throw new IllegalArgumentException("Họ tên không được để trống");
@@ -79,7 +78,7 @@ public class SinhVien {
             throw new IllegalArgumentException("Ngành chỉ được CNTT hoặc KTPM");
         }
 
-        // Nếu đã có mã SV thì phải kiểm tra khớp
+        // Nếu đã có mã SV thì phải kiểm tra khớp k
         if (this.maSV != null) {
             if (this.maSV.startsWith("455105") && !n.equals("CNTT")) {
                 throw new IllegalArgumentException("Mã SV " + this.maSV + " chỉ hợp lệ với ngành CNTT");
@@ -91,8 +90,6 @@ public class SinhVien {
 
         this.nganh = n;
     }
-
-
 
     public void setDiemTB(double diemTB) {
         if (diemTB >= 0.0 && diemTB <= 10.0) {
